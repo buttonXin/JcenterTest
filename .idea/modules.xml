@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MyMapClear.iml" filepath="$PROJECT_DIR$/MyMapClear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myannotation/myannotation.iml" filepath="$PROJECT_DIR$/myannotation/myannotation.iml" />
+    </modules>
+  </component>
+</project>
