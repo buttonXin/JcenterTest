@@ -15,12 +15,7 @@ public class XgUtils {
 
     private static Toast mToast ;
 
-    /**
-     * view.findViewById 省去步骤
-     * 这是在fragmen中
-     * @param target
-     * @param view
-     */
+
     public static void bindView(Object target , View view){
         Field[] fields = target.getClass().getDeclaredFields();
         if (fields != null && fields.length > 0){
@@ -38,11 +33,7 @@ public class XgUtils {
             }
         }
     }
-    /**
-     * view.findViewById 省去步骤
-     * 这是在activity中
-     * @param target
-     */
+
     public static void bindView(Object target ){
         View view;
         if (target instanceof Activity){
@@ -55,7 +46,7 @@ public class XgUtils {
                 BindView myAno = field.getAnnotation(BindView.class);
                 if (myAno != null){
                     int id = myAno.value()  ;
-                    //如果字段是私有的,那么必须要对这个字段设置
+
                     field.setAccessible(true);
                     try {
                         field.set(target , view.findViewById(id));
@@ -67,11 +58,6 @@ public class XgUtils {
         }
     }
 
-    /**
-     * 吐司
-     * @param context
-     * @param text
-     */
     public static void showToast(Context context , String text){
 
         if (mToast == null) {

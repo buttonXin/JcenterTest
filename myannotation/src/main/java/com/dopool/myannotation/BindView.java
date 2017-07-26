@@ -1,6 +1,5 @@
 package com.dopool.myannotation;
 
-import android.support.annotation.RequiresApi;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
