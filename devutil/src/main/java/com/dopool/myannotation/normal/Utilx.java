@@ -17,8 +17,6 @@ public class Utilx {
 
     /**
      * 吐司
-     * @param context
-     * @param content
      */
     public static void showToastShort(Context context , String content){
         if (mToast == null){
@@ -39,9 +37,7 @@ public class Utilx {
     }
 
     /**
-     * 事件格式转换
-     * @param yyyy_MM_dd_hh_mm_ss_EEEE
-     * @return
+     * 事件格式转换yyyy_MM_dd_hh_mm_ss_EEEE
      */
     public static  String  curTimeFormat(String yyyy_MM_dd_hh_mm_ss_EEEE){
 

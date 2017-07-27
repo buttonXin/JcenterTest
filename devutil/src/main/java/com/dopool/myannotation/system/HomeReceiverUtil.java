@@ -20,7 +20,6 @@ public class HomeReceiverUtil {
     private static  HomeKeyListener homeKeyListener ;
     /**
      * 添加home的广播
-     * @param context
      */
     public static void registerHomeKeyReceiver(Context context , final HomeKeyListener listener) {
         L.d("注册home的广播");
@@ -37,7 +36,6 @@ public class HomeReceiverUtil {
 
     /**
      * 注销home的广播
-     * @param context
      */
     public static void unregisterHomeKeyReceiver(Context context) {
         L.d( "销毁home的广播");

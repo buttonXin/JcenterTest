@@ -16,7 +16,6 @@ public class AppUtilx {
 
     /**
      * 获取当前versionName
-     * @param context
      */
     public static String getVersionName(Context context) {
         // 获取packagemanager的实例
@@ -35,7 +34,6 @@ public class AppUtilx {
 
     /**
      * 获取当前versionCode
-     * @param context
      */
     public static int getVersionCode(Context context) {
         // 获取packagemanager的实例

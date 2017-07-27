@@ -1,22 +1,18 @@
 package com.dopool.mymapclear;
 
-import android.media.Image;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
-import android.widget.VideoView;
 
 import com.dopool.myannotation.log.L;
 import com.dopool.myannotation.normal.AppUtilx;
 import com.dopool.myannotation.normal.FileUtilx;
-import com.dopool.myannotation.normal.ImageUtilx;
 import com.dopool.myannotation.normal.NetWorkUtilx;
-import com.dopool.myannotation.normal.Utilx;
 import com.dopool.myannotation.normal.ScreenUtil;
+import com.dopool.myannotation.normal.Utilx;
 import com.dopool.myannotation.system.HomeReceiverUtil;
 import com.dopool.myannotation.system.SystemUtilx;
 
@@ -37,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
 
         FileUtilx.saveDataToSP(this , "666" , "this is content");
 
-        L.e("文件大小 = " + FileUtilx.getSDTotalMSize()
+        L.e(/*"文件大小 = " + FileUtilx.getSDTotalMSize()
                 + " 剩余文件大小 = " +FileUtilx.getSDAvailableMSize()
-                + " 保存文件 = " + FileUtilx.saveDataToSDFile("xxxxxx" ,"testDir" ,"test.txt" , false)
+                +*/ " 保存文件 = " + FileUtilx.saveDataToSDFile("xxxxxx" ,"testDir" ,"test.txt" , false)
                 +" 读取文件内容 " + FileUtilx.readSDFileContent("testDir" ,"test.txt" )
 
                 +" versionName "+ AppUtilx.getVersionName(this)
@@ -61,10 +57,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        VideoView videoView = (VideoView) findViewById(R.id.videoView);
 
-        videoView.setVideoURI(Uri.parse(URL));
-        videoView.start();
 
         findViewById(R.id.text_center).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,12 +78,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        new Thread(new Runnable() {
+  /*      new Thread(new Runnable() {
             @Override
             public void run() {
                 L.e("image = " + ImageUtilx.getVideoFirstFrame(URL));
             }
-        }).start();
+        }).start();*/
+
 
     }
 

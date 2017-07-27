@@ -15,8 +15,6 @@ public class DialogUtilx {
 
     /**
      * 显示dialog
-     *
-     * @param context
      */
     public static void showDialog(Context context ,boolean cancelable , String message) {
 

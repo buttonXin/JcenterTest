@@ -4,7 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaMetadataRetriever;
-import android.view.Display;
+import android.util.DisplayMetrics;
 import android.view.WindowManager;
 
 import java.io.File;
@@ -53,9 +53,10 @@ public class ImageUtilx {
         int bmpHeight = options.outHeight;
 
         WindowManager windowManager = (WindowManager) ctx.getSystemService(Context.WINDOW_SERVICE);
-        Display display = windowManager.getDefaultDisplay();
-        int screenWidth = display.getWidth();
-        int screenHeight = display.getHeight();
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        windowManager.getDefaultDisplay().getMetrics(outMetrics);
+        int screenWidth = outMetrics.widthPixels;
+        int screenHeight = outMetrics.heightPixels;
 
         options.inSampleSize = 1;
         if (bmpWidth > bmpHeight) {

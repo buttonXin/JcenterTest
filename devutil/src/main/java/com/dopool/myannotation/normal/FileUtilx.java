@@ -13,7 +13,6 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.text.DecimalFormat;
 
 /**
  * Created by Administrator on 2017/7/26 0026.
@@ -22,10 +21,11 @@ import java.text.DecimalFormat;
 public class FileUtilx {
 
 
-    /**
+/*    *
      * 获得sd卡剩余容量，即可用大小
-     *返回以 M 为单位
-     */
+     *返回以 M 为单位-Xlint:deprecation*/
+
+    @Deprecated
     public static long getSDAvailableMSize() {
         File path = Environment.getExternalStorageDirectory();
         StatFs stat = new StatFs(path.getPath());
@@ -34,9 +34,10 @@ public class FileUtilx {
         return  blockSize * availableBlocks /1024/1024;
     }
 
-    /**
+ /*   *
      * 获得SD卡总大小 返回 M
      */
+    @Deprecated
     public static long getSDTotalMSize() {
         File path = Environment.getExternalStorageDirectory();
         StatFs stat = new StatFs(path.getPath());
@@ -47,7 +48,6 @@ public class FileUtilx {
 
     /**
      * 调用此方法自动计算指定文件或指定文件夹的大小
-     * @param filePath 文件路径
      */
     public static double getFileOrFilesMSize(String filePath) {
         File file = new File(filePath);
@@ -67,10 +67,6 @@ public class FileUtilx {
 
     /**
      * 获取指定文件夹
-     *
-     * @param f
-     * @return
-     * @throws Exception
      */
     public static long getFileSizes(File f) throws Exception {
         long size = 0;
@@ -87,10 +83,6 @@ public class FileUtilx {
 
     /**
      * 获取指定文件大小
-     *
-     * @param file
-     * @return
-     * @throws Exception
      */
     public static long getFileSize(File file) throws IOException {
         long size = 0;
@@ -117,9 +109,6 @@ public class FileUtilx {
 
     /**
      * 将文件目录进行改名
-     * @param oldFile
-     * @param parent
-     * @param child
      */
     public boolean fileRenameTo(File oldFile , String parent ,String child){
         if (! oldFile.exists()) return  false ;
@@ -127,12 +116,7 @@ public class FileUtilx {
     }
 
     /**
-     * 存储本地文件
-     * @param content
-     * @param fileName
-     * @param parent
-     * @param additional true 表示在后面追加， false 表示覆盖之前的
-     * @return
+     * 存储本地文件additional true 表示在后面追加， false 表示覆盖之前的
      */
     public static File saveDataToSDFile(String content,String parent ,
                                         String fileName, boolean additional ) {
@@ -166,10 +150,6 @@ public class FileUtilx {
 
     /**
      * 存储本地文件
-     * @param content
-     * @param fileName
-     * @param parent
-     * @return
      */
     public static File saveDataToSDFile(String content,String parent ,
                                         String fileName ) {

@@ -37,7 +37,6 @@ public class SystemUtilx {
 
     /**
      * 获取当前的外界设备HDMI是否打开
-     * @return
      */
     public static boolean getHDMI_isOpen() {
 
@@ -60,7 +59,6 @@ public class SystemUtilx {
 
     /**
      * 调节音量
-     * @param index
      */
 
     public static void changeVolume(Context context ,int index) {
